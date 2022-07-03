@@ -1,0 +1,201 @@
+@charset "UTF-8";
+.popup-bookmaker-widget {
+  position: relative;
+  padding: 9px 9px 0 0;
+  width: 300px;
+  display: none;
+}
+.popup-bookmaker-widget__indicator {
+  display: flex;
+  justify-content: flex-start;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  background: linear-gradient(to bottom right, #2e8ee7 0%, #174774 100%);
+  overflow: hidden;
+  position: relative;
+}
+.popup-bookmaker-widget__indicator::before {
+  animation: shine-popup-desktop 3.5s linear 2s infinite;
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 300%;
+  height: 100%;
+  opacity: 0;
+  transform: rotate(-45deg);
+  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 77%, rgba(255, 255, 255, 0.7) 92%, rgba(255, 255, 255, 0) 100%);
+}
+.popup-bookmaker-widget__indicator span {
+  display: block;
+  background-color: #ee381d;
+  width: 76px;
+  transform: rotate(-45deg);
+  text-align: center;
+  color: #fff;
+  margin-left: -10px;
+}
+.popup-bookmaker-widget__text {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.popup-bookmaker-widget__icon {
+  margin-left: 6px;
+}
+.popup-bookmaker-widget__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.popup-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  z-index: 999;
+}
+.popup-modal .popup-modal-content {
+  background: linear-gradient(to bottom right, #2b80de 0%, #123752 100%);
+  position: fixed;
+  width: 900px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+@media (max-width: 575.98px) {
+  .popup-modal .popup-modal-content {
+    width: 100%;
+    height: initial;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.popup-modal .popup-modal-content__bookmaker-img {
+  width: 94px;
+  height: 94px;
+  border-radius: 5px;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+.popup-modal .popup-modal-content__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 575.98px) {
+  .popup-modal .popup-modal-content__container {
+    display: block;
+  }
+}
+@media (max-width: 575.98px) {
+  .popup-modal .popup-modal-content__left {
+    display: none;
+  }
+}
+.popup-modal .popup-modal-content__right {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 575.98px) {
+  .popup-modal .popup-modal-content__right {
+    padding: 20px;
+  }
+}
+.popup-modal .popup-modal-content__right a {
+  text-decoration: none;
+}
+.popup-modal .popup-modal-content ul {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+@media (max-width: 575.98px) {
+  .popup-modal .popup-modal-content ul {
+    margin-left: 0;
+  }
+}
+.popup-modal .popup-modal-content ul li {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.popup-modal .popup-modal-content ul li::before {
+  font-family: "icomoon";
+  content: "";
+  font-size: 20px;
+  color: #1ac625;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.popup-modal .popup-modal-content__cta {
+  background: #ee381d;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 0 20px #ee381dcc;
+  margin-bottom: 15px;
+}
+.popup-modal .popup-modal-content__cta::after {
+  font-family: "icomoon";
+  content: "";
+  font-weight: 400;
+  margin-left: 6px;
+  font-size: 13px;
+}
+.popup-modal .popup-modal-content .compliance_asterisk {
+  font-size: 9px;
+  color: #fff;
+  text-align: center;
+}
+.popup-modal .popup-modal-content .close-modal {
+  color: #fff;
+  font-size: 13px;
+  background-color: #000;
+  border-radius: 50%;
+  padding: 7px;
+  width: 30px;
+  text-align: center;
+  height: 30px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .popup-modal .popup-modal-content .close-modal {
+    position: static;
+    align-self: flex-end;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
