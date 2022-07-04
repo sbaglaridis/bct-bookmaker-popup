@@ -17,7 +17,7 @@ $colors = (object) [
 	'label_text_color'         => empty( $label_text_color ) ? '#fff' : $label_text_color,
 ];
 
-$popup_indicator_gradient = "linear-gradient(to right, " . $colors->container_gradient_end . " 0%, " . $colors->container_gradient_start . " 100%";
+$popup_indicator_gradient = "linear-gradient(to right, " . $colors->container_gradient_end . " 0%, " . $colors->container_gradient_start . " 100%);";
 
 if ( empty( $popup_id ) ) :
 	return '';

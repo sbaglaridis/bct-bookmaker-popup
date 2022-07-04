@@ -4,7 +4,7 @@
  * Bct Bookmaker Popup
  *
  * Plugin Name: BCT Bookmaker Popup
- * Version: 1.0.0
+ * Version: 1.0.1
  */
 
 require 'plugin-update-checker/plugin-update-checker.php';
@@ -19,6 +19,12 @@ $myUpdateChecker->setBranch( 'master' );
 //$myUpdateChecker->setAuthentication( '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' );
 
 //require_once 'vendor/autoload.php';
+
+$cookie = $_COOKIE['bet_popup_closed'];
+
+if ( isset($cookie) && $cookie === 'true' ) {
+	return '';
+}
 
 define( 'BCT_BOOKMAKERS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'BCT_BOOKMAKERS_URL', plugin_dir_url( __FILE__ ) );
