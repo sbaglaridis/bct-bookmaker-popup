@@ -131,6 +131,7 @@
   text-decoration: none;
 }
 .popup-modal .popup-modal-content ul {
+  list-style-type: none;
   margin-left: 10px;
   margin-bottom: 5px;
 }
@@ -150,11 +151,17 @@
 .popup-modal .popup-modal-content ul li::before {
   font-family: "icomoon";
   content: "";
-  font-size: 20px;
+  font-size: 15px;
   color: #1ac625;
   background-color: #fff;
   border-radius: 50%;
   margin-right: 15px;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .popup-modal .popup-modal-content__cta {
   background: #ee381d;

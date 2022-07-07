@@ -183,6 +183,7 @@ $bct-tick-icon: "\e91f";
     }
 
     ul {
+      list-style-type: none;
       margin-left: 10px;
       margin-bottom: 5px;
 
@@ -199,13 +200,19 @@ $bct-tick-icon: "\e91f";
         align-items: center;
 
         &::before {
-          font-family: 'icomoon';
+          font-family: "icomoon";
           content: $bct-tick-icon;
-          font-size: 20px;
+          font-size: 15px;
           color: #1ac625;
           background-color: #fff;
           border-radius: 50%;
           margin-right: 15px;
+          width: 26px;
+          height: 26px;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }

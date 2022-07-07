@@ -4,7 +4,7 @@
  * Bct Bookmaker Popup
  *
  * Plugin Name: BCT Bookmaker Popup
- * Version: 1.0.1
+ * Version: 1.0.2
  */
 
 require 'plugin-update-checker/plugin-update-checker.php';
@@ -77,7 +77,7 @@ if ( count( $bct_bookmaker_popup_errors ) > 0 ) {
 		require_once BCT_BOOKMAKERS_TEMPLATES . '/footer-popup.php';
 	} );
 
-	add_action( 'bct_bookmaker_btn', function () {
+	add_action( 'bct_bookmaker_btn', function ($args) {
 		require_once BCT_BOOKMAKERS_TEMPLATES . '/bookmaker_btn.php';
 	} );
 }
