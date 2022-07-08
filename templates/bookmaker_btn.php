@@ -25,15 +25,15 @@ endif;
 
 ?>
 
-<div class="popup-bookmaker-widget popup-indicator" data-popup="widget">
-    <div class="popup-bookmaker-widget__indicator" style="background: <?php echo $popup_indicator_gradient; ?>; color:<?php echo $popup->color_text; ?>">
+<div class="bct-bookmaker-popup-btn" data-popup="widget">
+    <div class="bct-bookmaker-popup-btn__indicator" style="background: <?php echo $popup_indicator_gradient; ?>; color:<?php echo $popup->color_text; ?>">
         <span style="background-color: <?php echo $colors->label_bg_color; ?>; color:<?php echo $colors->label_text_color; ?>;">ΝΕΟ</span>
-        <div class="popup-bookmaker-widget__text">
+        <div class="bct-bookmaker-popup-btn__text">
             <?php echo $_bet['popup_text']; ?>
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 512 512" class="popup-bookmaker-widget__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 512 512" class="bct-bookmaker-popup-btn__icon">
                 <path fill="<?php echo $popup->color_text; ?>" d="M158.186 0l-60.372 60.374 195.626 195.626-195.626 195.626 60.372 60.374 256-256z"></path>
             </svg>
         </div>
     </div>
-    <i class="popup-bookmaker-widget__close icon-close-slim close-popup"></i>
+    <i class="bct-bookmaker-popup-btn__close icon-close-slim close-popup"></i>
 </div>

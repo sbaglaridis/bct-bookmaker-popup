@@ -43,21 +43,24 @@ $grid-breakpoints: (
 $bct-right-arrow-icon: "\e931";
 $bct-tick-icon: "\e91f";
 
-.popup-bookmaker-widget {
+.bct-bookmaker-popup-btn {
   position: relative;
-  padding: 9px 9px 0 0;
-  width: 300px;
   display: none;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 32px;
+  }
 
   &__indicator {
     height: 42px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     color: #fff;
     font-size: 1.4rem;
     font-weight: 600;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 10px 10px 70px;
     background: linear-gradient(to bottom right, #2e8ee7 0%, #174774 100%);
     overflow: hidden;
     position: relative;
@@ -79,11 +82,13 @@ $bct-tick-icon: "\e91f";
     span {
       display: block;
       background-color: #ee381d;
-      width: 76px;
+      width: 100px;
       transform: rotate(-45deg);
       text-align: center;
-      color: #fff;
       margin-left: -10px;
+      position: absolute;
+      bottom: 8px;
+      left: -6px;
     }
   }
 
@@ -99,15 +104,15 @@ $bct-tick-icon: "\e91f";
 
   &__close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -9px;
+    right: -9px;
     background-color: #000;
     color: #fff;
     font-size: 10px;
     line-height: 1;
     border-radius: 50%;
     padding: 5px;
-    z-index: 999;
+    //z-index: 999;
     cursor: pointer;
   }
 }
@@ -261,5 +266,30 @@ $bct-tick-icon: "\e91f";
         align-self: flex-end;
       }
     }
+  }
+}
+
+@keyframes shine-popup-desktop {
+  0% {
+    opacity: 1;
+    top: 30%;
+    right: 10%;
+    transition-property: right, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+
+  20% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transition-property: right, top, opacity;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transition-property: right, top, opacity;
   }
 }

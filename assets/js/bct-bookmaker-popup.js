@@ -1,7 +1,7 @@
 (function ($) {
   $(document).ready(function () {
     const modal = $('#popup-modal');
-    const popup = $('.popup-indicator');
+    const popup = $('.bct-bookmaker-popup-btn');
     const popupCloseModal = $('.close-modal');
     const popupCloseBtn = $('.close-popup');
 
