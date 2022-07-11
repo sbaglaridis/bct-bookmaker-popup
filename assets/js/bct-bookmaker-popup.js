@@ -1,12 +1,12 @@
 (function ($) {
   $(document).ready(function () {
-    const modal = $('#popup-modal');
-    const popup = $('.bct-bookmaker-popup-btn');
-    const popupCloseModal = $('.close-modal');
-    const popupCloseBtn = $('.close-popup');
+    var modal = $('#popup-modal');
+    var popup = $('.bct-bookmaker-popup-btn');
+    var popupCloseModal = $('.close-modal');
+    var popupCloseBtn = $('.close-popup');
+    var prevScrollpos = window.pageYOffset;
 
     popup.on('click', function (e) {
-      console.log('here');
       modal.css('display', 'block');
     });
 
@@ -20,6 +20,20 @@
       }
     });
 
+    if($(window).width() < 768) {
+      window.addEventListener('scroll', function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          popup.addClass('sticky');
+          popup.css('width', $(window).width()-10);
+        }
+        else if(prevScrollpos <= currentScrollPos)  {
+          popup.removeClass('sticky');
+        }
+        prevScrollpos = currentScrollPos;
+      });
+    }
+
     if (getCookie('bet_popup_closed') !== 'true') {
       popup.css('display', 'block');
     }
@@ -31,15 +45,15 @@
     });
 
     function setCookie(cname, cvalue, exdays) {
-      const d = new Date();
+      var d = new Date();
       d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-      const expires = "expires=" + d.toUTCString();
+      var expires = "expires=" + d.toUTCString();
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
 
     function getCookie(cname) {
-      const name = cname + '=';
-      const ca = document.cookie.split(';');
+      var name = cname + '=';
+      var ca = document.cookie.split(';');
       for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         while (c.charAt(0) == ' ') {

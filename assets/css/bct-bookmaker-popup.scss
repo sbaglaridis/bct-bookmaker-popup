@@ -46,7 +46,21 @@ $bct-tick-icon: "\e91f";
 .bct-bookmaker-popup-btn {
   position: relative;
   display: none;
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
+
+  &.sticky {
+    position: fixed;
+    top: 94px;
+    left: 0;
+    max-width: initial;
+  }
+
+  @media screen and (max-width: 767px) {
+    max-width: 310px;
+    width: 100%;
+    margin: 0 auto 16px auto;
+    z-index: 9999;
+  }
 
   @media screen and (min-width: 992px) {
     margin-bottom: 32px;
@@ -112,8 +126,11 @@ $bct-tick-icon: "\e91f";
     line-height: 1;
     border-radius: 50%;
     padding: 5px;
-    //z-index: 999;
     cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      z-index: 999;
+    }
   }
 }
 
