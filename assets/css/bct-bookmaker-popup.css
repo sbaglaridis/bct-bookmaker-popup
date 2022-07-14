@@ -1,26 +1,13 @@
+@charset "UTF-8";
 .bct-bookmaker-popup-btn {
   position: relative;
-  display: none;
-  margin: 0 0 16px 0;
+  padding: 11px;
 }
 .bct-bookmaker-popup-btn.sticky {
-  position: fixed;
-  top: 94px;
-  left: 0;
-  max-width: initial;
-}
-@media screen and (max-width: 767px) {
-  .bct-bookmaker-popup-btn {
-    max-width: 310px;
-    width: 100%;
-    margin: 0 auto 16px auto;
-    z-index: 9990;
-  }
-}
-@media screen and (min-width: 992px) {
-  .bct-bookmaker-popup-btn {
-    margin-bottom: 32px;
-  }
+  display: none;
+  position: sticky;
+  top: 95px;
+  z-index: 9990;
 }
 .bct-bookmaker-popup-btn__indicator {
   height: 42px;
@@ -69,8 +56,8 @@
 }
 .bct-bookmaker-popup-btn__close {
   position: absolute;
-  top: -9px;
-  right: -9px;
+  top: 2px;
+  right: 2px;
   background-color: #000;
   color: #fff;
   font-size: 10px;
@@ -173,7 +160,7 @@
 }
 .popup-modal .popup-modal-content ul li::before {
   font-family: "icomoon";
-  content: "\e91f";
+  content: "";
   font-size: 15px;
   color: #1ac625;
   background-color: #fff;
@@ -193,12 +180,12 @@
   border-radius: 5px;
   text-align: center;
   font-size: 14px;
-  box-shadow: 0 0 20px rgba(238, 56, 29, 0.8);
+  box-shadow: 0 0 20px #ee381dcc;
   margin-bottom: 15px;
 }
 .popup-modal .popup-modal-content__cta::after {
   font-family: "icomoon";
-  content: "\e931";
+  content: "";
   font-weight: 400;
   margin-left: 6px;
   font-size: 13px;

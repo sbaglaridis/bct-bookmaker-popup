@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @var array $atts
+ */
+
 global $_bet;
 
 $popup_id = (int) $_bet['popup_bookmaker_id'];
@@ -23,15 +27,28 @@ if ( empty( $popup_id ) ) :
 	return '';
 endif;
 
+$classes = [ 'bct-bookmaker-popup-btn' ];
+
+if ( $atts['sticky'] === 'true' ) {
+	$classes[] = 'sticky';
+}
+
+if ( ! empty( $atts['classes'] ) ) {
+    $classes[] = $atts['classes'];
+}
+
 ?>
 
-<div class="bct-bookmaker-popup-btn" data-popup="widget">
-    <div class="bct-bookmaker-popup-btn__indicator" style="background: <?php echo $popup_indicator_gradient; ?>; color:<?php echo $popup->color_text; ?>">
+<div class="<?php echo implode(' ', $classes); ?>" data-popup="widget">
+    <div class="bct-bookmaker-popup-btn__indicator"
+         style="background: <?php echo $popup_indicator_gradient; ?>; color:<?php echo $popup->color_text; ?>">
         <span style="background-color: <?php echo $colors->label_bg_color; ?>; color:<?php echo $colors->label_text_color; ?>;">ΝΕΟ</span>
         <div class="bct-bookmaker-popup-btn__text">
-            <?php echo $_bet['popup_text']; ?>
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 512 512" class="bct-bookmaker-popup-btn__icon">
-                <path fill="<?php echo $popup->color_text; ?>" d="M158.186 0l-60.372 60.374 195.626 195.626-195.626 195.626 60.372 60.374 256-256z"></path>
+			<?php echo $_bet['popup_text']; ?>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 512 512"
+                 class="bct-bookmaker-popup-btn__icon">
+                <path fill="<?php echo $popup->color_text; ?>"
+                      d="M158.186 0l-60.372 60.374 195.626 195.626-195.626 195.626 60.372 60.374 256-256z"></path>
             </svg>
         </div>
     </div>
