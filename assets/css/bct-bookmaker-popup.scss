@@ -46,7 +46,6 @@ $bct-tick-icon: "\e91f";
 .bct-bookmaker-popup-btn {
   position: relative;
   padding: 11px;
-  //margin: 0 0 16px 0;
 
   &.sticky {
     display: none;
@@ -54,17 +53,6 @@ $bct-tick-icon: "\e91f";
     top: 95px;
     z-index: 9990;
   }
-
-  //@media screen and (max-width: 767px) {
-  //  max-width: 310px;
-  //  width: 100%;
-  //  margin: 0 auto 16px auto;
-  //  z-index: 9990;
-  //}
-
-  //@media screen and (min-width: 992px) {
-  //  margin-bottom: 32px;
-  //}
 
   &__indicator {
     height: 42px;
@@ -114,8 +102,6 @@ $bct-tick-icon: "\e91f";
 
   &__icon {
     margin-left: 6px;
-    //visibility: hidden;
-    //visibility: visible;
   }
 
   &__close {
@@ -146,7 +132,7 @@ $bct-tick-icon: "\e91f";
   overflow: auto;
   background-color: rgba(0, 0, 0, .4);
   border-radius: 5px;
-  z-index: 999;
+  z-index: 9999;
 
   .popup-modal-content {
     background: linear-gradient(to bottom right, #2b80de 0%, #123752 100%);
