@@ -20,19 +20,48 @@
       }
     });
 
-    if($(window).width() < 768) {
-      window.addEventListener('scroll', function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-          popup.addClass('sticky');
-          popup.css('width', $(window).width()-10);
-        }
-        else if(prevScrollpos <= currentScrollPos)  {
-          popup.removeClass('sticky');
-        }
-        prevScrollpos = currentScrollPos;
-      });
+    var sticky = $('.bct-bookmaker-popup-btn.sticky');
+
+    if (!sticky.length) {
+      return false;
     }
+
+    function checkViewport() {
+      var offsetTop = 0;
+
+      $('[scroll-offset]').each(function (_index, elem) {
+        offsetTop += elem.clientHeight;
+      });
+
+      sticky.css('top', offsetTop);
+    }
+
+    checkViewport();
+
+    sticky.css('display', 'block');
+
+    $(window).on('resize', checkViewport);
+
+    function showDisplayBtn() {
+      var currentScrollPos = window.pageYOffset;
+
+      if (prevScrollpos > currentScrollPos) {
+        // popup.addClass('sticky');
+        // popup.css('width', $(window).width() - 10);
+        popup.css('visibility', 'visible');
+      } else if (prevScrollpos <= currentScrollPos) {
+        // popup.removeClass('sticky');
+        popup.css('visibility', 'hidden');
+      }
+
+      prevScrollpos = currentScrollPos;
+    }
+
+    // if ($(window).width() < 768) {
+    //   showDisplayBtn()
+    // }
+    //
+    // window.addEventListener('scroll', showDisplayBtn);
 
     if (getCookie('bet_popup_closed') !== 'true') {
       popup.css('display', 'block');
