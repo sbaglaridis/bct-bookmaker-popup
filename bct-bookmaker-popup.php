@@ -19,7 +19,6 @@ $myUpdateChecker->setBranch( 'master' );
 
 $cookie = $_COOKIE['bet_popup_closed'] ?? '';
 
-var_dump($cookie);
 if ( isset( $cookie ) && $cookie === 'true' ) {
 	add_shortcode( 'bct_bookmaker_btn', function () {
 		return '';
