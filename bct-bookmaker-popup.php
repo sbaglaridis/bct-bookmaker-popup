@@ -4,7 +4,7 @@
  * Bct Bookmaker Popup
  *
  * Plugin Name: BCT Bookmaker Popup
- * Version: 1.1.14
+ * Version: 1.1.15
  */
 
 require 'plugin-update-checker/plugin-update-checker.php';

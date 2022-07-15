@@ -41,10 +41,6 @@
     //
     // window.addEventListener('scroll', showDisplayBtn);
 
-    if (getCookie('bet_popup_closed') !== 'true') {
-      popup.css('display', 'block');
-    }
-
     popupCloseBtn.on('click', function (e) {
       e.stopPropagation();
       popup.hide();
@@ -72,27 +68,27 @@
       }
       return '';
     }
+
+    function checkViewport() {
+      var offsetTop = 0;
+
+      $('[scroll-offset]').each(function (_index, elem) {
+        offsetTop += elem.clientHeight;
+      });
+
+      sticky.css('top', offsetTop);
+    }
+
+    var sticky = $('.bct-bookmaker-popup-btn.sticky');
+
+    if (sticky.length) {
+      checkViewport();
+
+      $(window).on('resize', checkViewport);
+    }
+
+    if (getCookie('bet_popup_closed') !== 'true') {
+      popup.css('display', 'block');
+    }
   });
-
-  var sticky = $('.bct-bookmaker-popup-btn.sticky');
-
-  if (!sticky.length) {
-    return false;
-  }
-
-  function checkViewport() {
-    var offsetTop = 0;
-
-    $('[scroll-offset]').each(function (_index, elem) {
-      offsetTop += elem.clientHeight;
-    });
-
-    sticky.css('top', offsetTop);
-  }
-
-  checkViewport();
-
-  sticky.css('display', 'block');
-
-  $(window).on('resize', checkViewport);
 })(jQuery);
