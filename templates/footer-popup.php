@@ -28,13 +28,14 @@ $img_alt = ($popup_img_type == 2) ? 'casino bg popup' : 'soccer player';
         <div class="popup-modal-content__container">
             <div class="popup-modal-content__left">
                 <img width="500" height="500" src="<?php echo BCT_BOOKMAKERS_IMAGES . $img_src ?>"
-                     alt="<?php echo $img_alt; ?>">
+                     alt="<?php echo $img_alt; ?>" loading="lazy" />
             </div>
             <div class="popup-modal-content__right">
                 <span class="close-modal"><i class="icon-close"></i></span>
                 <img style="background-color: <?php echo $bg_color; ?>" width="94" height="94"
                      src="<?php echo get_the_post_thumbnail_url($bookmaker_id_for_popup, 'thumbnail'); ?>"
-                     alt="<?php echo $book->nice_name; ?> Logo" class="popup-modal-content__bookmaker-img"/>
+                     alt="<?php echo $book->nice_name; ?> Logo" class="popup-modal-content__bookmaker-img"
+                     loading="lazy" />
                 <?php if (!empty($popup_bullets)) : ?>
                     <ul>
                         <?php foreach ($popup_bullets as $bullet) : ?>
