@@ -49,9 +49,10 @@ $bct-tick-icon: "\e91f";
 
   &.sticky {
     display: none;
-    position: sticky;
+    position: fixed;
     top: 95px;
     z-index: 9990;
+    width: 100%;
   }
 
   &__indicator {

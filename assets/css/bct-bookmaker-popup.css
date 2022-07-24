@@ -4,9 +4,10 @@
 }
 .bct-bookmaker-popup-btn.sticky {
   display: none;
-  position: sticky;
+  position: fixed;
   top: 95px;
   z-index: 9990;
+  width: 100%;
 }
 .bct-bookmaker-popup-btn__indicator {
   height: 42px;
