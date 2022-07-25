@@ -22,18 +22,20 @@
   overflow: hidden;
   position: relative;
 }
-.bct-bookmaker-popup-btn__indicator::before {
-  animation: shine-popup-desktop 3.5s linear 2s infinite;
-  content: "";
-  position: absolute;
-  top: -110%;
-  left: -210%;
-  width: 300%;
-  height: 100%;
-  opacity: 0;
-  transform: rotate(-45deg);
-  background: rgba(255, 255, 255, 0.3);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 77%, rgba(255, 255, 255, 0.7) 92%, rgba(255, 255, 255, 0) 100%);
+@media screen and (min-width: 768px) {
+  .bct-bookmaker-popup-btn__indicator::before {
+    animation: shine-popup-desktop 3.5s linear 2s infinite;
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 300%;
+    height: 100%;
+    opacity: 0;
+    transform: rotate(-45deg);
+    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 77%, rgba(255, 255, 255, 0.7) 92%, rgba(255, 255, 255, 0) 100%);
+  }
 }
 .bct-bookmaker-popup-btn__indicator span {
   display: block;
