@@ -2,6 +2,11 @@
   position: relative;
   padding: 11px;
 }
+@media screen and (min-width: 768px) {
+  .bct-bookmaker-popup-btn {
+    padding: 0 11px 11px 11px;
+  }
+}
 .bct-bookmaker-popup-btn.sticky {
   display: none;
   position: fixed;
@@ -67,6 +72,11 @@
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .bct-bookmaker-popup-btn__close {
+    top: -9px;
+  }
 }
 @media screen and (max-width: 767px) {
   .bct-bookmaker-popup-btn__close {
