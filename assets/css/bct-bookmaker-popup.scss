@@ -47,6 +47,10 @@ $bct-tick-icon: "\e91f";
   position: relative;
   padding: 11px;
 
+  @media screen and (min-width: 768px) {
+    padding: 0 11px 11px 11px;
+  }
+
   &.sticky {
     display: none;
     position: fixed;
@@ -118,6 +122,10 @@ $bct-tick-icon: "\e91f";
     border-radius: 50%;
     padding: 5px;
     cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      top: -9px;
+    }
 
     @media screen and (max-width: 767px) {
       z-index: 999;
